@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход — Fun Student</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-aside">
+      <a class="brand brand-light" href="login.html"><span class="brand-mark">F</span> fun student</a>
+      <div class="aside-copy">
+        <h1>Учитесь.<br>Общайтесь.<br><span>Развивайтесь.</span></h1>
+      </div>
+    </section>
+    <section class="auth-main">
+      <div class="auth-card">
+        <a class="brand brand-dark mobile-brand" href="login.html"><span class="brand-mark">F</span> fun student</a>
+        <span class="eyebrow welcome-eyebrow">С ВОЗВРАЩЕНИЕМ</span>
+        <h2>Войти в аккаунт</h2>
+        <p class="muted">Введите данные, чтобы продолжить работу.</p>
+        <form id="loginForm" class="form">
+          <label for="loginEmail">Электронная почта</label>
+          <input id="loginEmail" name="email" type="email" placeholder="name@example.com" autocomplete="username" required>
+          <label for="loginPassword">Пароль</label>
+          <div class="password-wrap">
+            <input id="loginPassword" name="password" type="password" placeholder="Введите пароль" autocomplete="current-password" required>
+            <button class="password-toggle" type="button" data-toggle-password="loginPassword" aria-label="Показать пароль" title="Показать пароль"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+          </div>
+          <div id="loginError" class="form-error" role="alert"></div>
+          <button class="btn btn-primary btn-full" type="submit">Войти <span>→</span></button>
+        </form>
+        <p class="auth-switch">Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
+      </div>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+</body>
+</html>

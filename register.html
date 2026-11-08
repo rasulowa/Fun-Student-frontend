@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация — Fun Student</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-aside">
+      <a class="brand brand-light" href="login.html"><span class="brand-mark">F</span> fun student</a>
+      <div class="aside-copy">
+        <h1>Ваш путь<br>к новым <span>возможностям.</span></h1>
+      </div>
+    </section>
+    <section class="auth-main">
+      <div class="auth-card register-card">
+        <a class="brand brand-dark mobile-brand" href="login.html"><span class="brand-mark">F</span> fun student</a>
+        <h2>Регистрация</h2>
+        <p class="muted">Заполните данные для создания аккаунта.</p>
+        <form id="registerForm" class="form">
+          <div class="form-row">
+            <div>
+              <label for="firstName">Имя</label>
+              <input id="firstName" name="firstName" type="text" placeholder="Иван" required minlength="2">
+            </div>
+            <div>
+              <label for="lastName">Фамилия</label>
+              <input id="lastName" name="lastName" type="text" placeholder="Иванов" required minlength="2">
+            </div>
+          </div>
+          <label for="registerEmail">Электронная почта</label>
+          <input id="registerEmail" name="email" type="email" placeholder="name@example.com" required>
+          <label for="registerPassword">Пароль</label>
+          <div class="password-wrap"><input id="registerPassword" name="password" type="password" placeholder="Минимум 6 символов" required minlength="6"><button class="password-toggle" type="button" data-toggle-password="registerPassword" aria-label="Показать пароль" title="Показать пароль"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+          <label for="confirmPassword">Подтвердите пароль</label>
+          <div class="password-wrap"><input id="confirmPassword" name="confirmPassword" type="password" placeholder="Повторите пароль" required minlength="6"><button class="password-toggle" type="button" data-toggle-password="confirmPassword" aria-label="Показать пароль" title="Показать пароль"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+          <fieldset class="role-fieldset">
+            <legend>Выберите роль</legend>
+            <div class="role-options">
+              <label class="role-option">
+                <input type="radio" name="role" value="Студент" checked>
+                <span class="role-icon">🎓</span><span><strong>Студент</strong><small>Обучающийся</small></span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="role" value="Преподаватель">
+                <span class="role-icon">📚</span><span><strong>Преподаватель</strong><small>Преподаёт курсы</small></span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="role" value="Администратор">
+                <span class="role-icon">⚙️</span><span><strong>Администратор</strong><small>Управляет системой</small></span>
+              </label>
+            </div>
+          </fieldset>
+          <div id="registerError" class="form-error" role="alert"></div>
+          <button class="btn btn-primary btn-full" type="submit">Создать аккаунт <span>→</span></button>
+        </form>
+        <p class="auth-switch">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+      </div>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+</body>
+</html>
